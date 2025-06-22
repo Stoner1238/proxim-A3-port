@@ -7,10 +7,20 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ✅ Smooth fade-in for page load */
 body {
   background: linear-gradient(135deg, rgba(0, 128, 255, 0.6), rgba(128, 0, 255, 0.6)), url('stellar-free-template-353x278.jpg.avif') center/cover no-repeat;
   color: #fff;
   min-height: 100vh;
+  opacity: 0;
+  animation: fadeInBody 1.2s ease-in-out forwards;
+}
+
+/* ✅ Fade-in animation keyframes */
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
 }
 
 header {
@@ -33,10 +43,15 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a.active {
   text-decoration: underline;
+  color: #ffd700;
+}
+
+nav a:hover {
   color: #ffd700;
 }
 
@@ -62,11 +77,14 @@ nav a.active {
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
+/* ✅ Button hover animation */
 .btn:hover {
   background: #3700b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 footer {
@@ -86,15 +104,24 @@ footer {
   width: 100%;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
 }
+
+/* ✅ Image hover animation */
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
 .social-icons a {
   color: white;
   margin: 0 10px;
   font-size: 24px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* ✅ Icon hover effect */
 .social-icons a:hover {
-  color: #1da1f2; /* Example hover color */
+  color: #1da1f2;
+  transform: scale(1.2);
 }

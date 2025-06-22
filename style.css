@@ -125,3 +125,45 @@ footer {
   color: #1da1f2;
   transform: scale(1.2);
 }
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+}
